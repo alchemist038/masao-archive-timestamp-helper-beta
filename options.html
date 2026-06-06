@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timestamp Helper 設定</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <h1>Timestamp Helper 設定</h1>
+      </header>
+
+      <section class="panel">
+        <label class="field">
+          <span>秒数補正</span>
+          <input id="offsetSeconds" type="number" min="0" max="30" step="1">
+        </label>
+
+        <label class="field">
+          <span>ショートカット</span>
+          <select id="shortcutModifier">
+            <option value="alt">Alt + キー</option>
+            <option value="ctrlAlt">Ctrl + Alt + キー</option>
+            <option value="shiftAlt">Shift + Alt + キー</option>
+          </select>
+        </label>
+
+        <label class="field field-wide">
+          <span>出力テンプレート</span>
+          <input id="outputTemplate" type="text" spellcheck="false">
+        </label>
+      </section>
+
+      <section class="panel">
+        <div class="section-header">
+          <h2>定型文</h2>
+          <button id="addPreset" type="button">追加</button>
+        </div>
+        <div id="presetRows" class="preset-rows"></div>
+      </section>
+
+      <footer class="actions">
+        <button id="resetDefaults" class="secondary" type="button">初期値に戻す</button>
+        <button id="saveSettings" class="primary" type="button">保存</button>
+        <span id="status" role="status" aria-live="polite"></span>
+      </footer>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

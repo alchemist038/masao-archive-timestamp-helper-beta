@@ -1,0 +1,16 @@
+# Temporary and local files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Distribution work folders.
+# Keep the versioned ZIP files, but do not track extracted copies.
+dist/*/
+
+# Temporary files generated while rendering documents
+docs/install-guide-assets/_pdf_page.png
